@@ -27,7 +27,7 @@ notifications, and test coverage.
 
 Ensure the following are installed:
 
-- Ruby (3.3.x recommended)
+- Ruby (3.4.x recommended)
 - Bundler
 - SQLite3
 - Node.js (for asset handling)
