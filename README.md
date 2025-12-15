@@ -138,4 +138,3 @@ bin/rails test
 - This project is intended for **educational purposes**.
 
 ---
-
