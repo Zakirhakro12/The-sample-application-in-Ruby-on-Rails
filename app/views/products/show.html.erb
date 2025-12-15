@@ -1,0 +1,44 @@
+<p class="back-link">
+  <%= link_to "← Back", products_path %>
+</p>
+
+<section class="product-show">
+
+  
+  <div class="product-show-image">
+    <% if @product.featured_image.attached? %>
+      <%= image_tag @product.featured_image %>
+    <% else %>
+      <%= image_tag "placeholder.png" %>
+    <% end %>
+  </div>
+
+ 
+  <section class="product-show-details">
+
+    <% cache @product do %>
+      <h1><%= @product.name %></h1>
+
+      <div class="product-description">
+        <%= @product.description %>
+      </div>
+    <% end %>
+
+    <%= render "inventory", product: @product %>
+
+    <% if authenticated? %>
+      <div class="product-actions">
+        <%= link_to "Edit",
+              edit_product_path(@product),
+              class: "action-link" %>
+
+        <%= button_to "Delete",
+              @product,
+              method: :delete,
+              data: { turbo_confirm: "Are you sure?" },
+              class: "action-button delete" %>
+      </div>
+    <% end %>
+
+  </section>
+</section>
