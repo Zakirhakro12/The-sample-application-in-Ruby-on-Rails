@@ -1,50 +1,141 @@
 # README
 
-HOW TO RUN THE PROJECT
+# Rails E-commerce Application (Store)
 
-1. Install Ruby if it is not already installed.
+A sample **Ruby on Rails e-commerce application** developed for academic purposes.
+The project demonstrates core Rails features including authentication, product
+management, image uploads, background jobs, and automated testing.
 
-2. Install Bundler:
-   gem install bundler
+---
 
-3. Open the terminal and navigate to the project directory:
-   cd store
+## Overview
 
-4. Install project dependencies:
-   bundle install
+The application allows authenticated users to manage products in a simple store
+environment. It includes product listings with images, inventory tracking, email
+notifications, and test coverage.
 
-5. Database setup:
-   The database and migrations are already included in the project.
-   If the database is already created, you can directly start the Rails
-   development server.
+---
 
-   (Optional – only if required)
-   bin/rails db:create
-   bin/rails db:migrate
+## Versions
 
-6. Start the Rails development server:
-   bin/rails server
+- **Ruby:** 3.4.x
+- **Rails:** 8.1.x
 
-   Note: If port 3000 is already in use, you can specify another port:
-   bin/rails server -p 3001
+---
 
-7. Open the application in the browser:
-   http://127.0.0.1:3000/
+## System Dependencies
 
---------------------------------------------------
-LOGIN CREDENTIALS
+Ensure the following are installed:
 
-To access authenticated features (such as creating, editing, or deleting
-products), use the following credentials:
+- Ruby (3.3.x recommended)
+- Bundler
+- SQLite3
+- Node.js (for asset handling)
 
-Email: you@example.org  
-Password: example
+---
 
---------------------------------------------------
-HOW TO RUN THE TESTS
+## Configuration
 
-1. Make sure you are in the project directory:
-   cd store
+Install Bundler (if not already installed):
 
-2. Run the test suite:
-   bin/rails test
+```bash
+gem install bundler
+```
+
+Navigate to the project directory:
+
+```bash
+cd store
+```
+
+Install dependencies:
+
+```bash
+bundle install
+```
+
+---
+
+## Database Setup
+
+The database configuration and migrations are already included.
+
+If the database is not created, run:
+
+```bash
+bin/rails db:create
+bin/rails db:migrate
+```
+
+If the database already exists, you can proceed directly to running the server.
+
+---
+
+## Running the Application
+
+Start the Rails development server:
+
+```bash
+bin/rails server
+```
+
+If port `3000` is in use:
+
+```bash
+bin/rails server -p 3001
+```
+
+Open the application in your browser:
+
+```
+http://127.0.0.1:3000/
+```
+
+---
+
+## Login Credentials
+
+Use the following credentials to access authenticated features:
+
+- **Email:** you@example.org
+- **Password:** example
+
+---
+
+## Running the Test Suite
+
+To run all tests:
+
+```bash
+bin/rails test
+```
+
+---
+
+## Features
+
+- User authentication (login / logout)
+- Product CRUD operations
+- Image uploads using Active Storage
+- Inventory tracking
+- Email notifications for back-in-stock products
+- Automated test coverage
+
+---
+
+## Services
+
+- **Active Storage** – Image uploads
+- **Action Mailer** – Email notifications
+
+---
+
+## Notes
+
+- The project was developed and tested in a **Linux environment (Ubuntu / WSL)**.
+- This reflects the standard production environment for Ruby on Rails applications.
+- Windows-native execution may require additional configuration.
+- This project is intended for **educational purposes**.
+
+---
+
